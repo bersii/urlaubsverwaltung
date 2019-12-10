@@ -1,0 +1,941 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #eeeeee;
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    }
+
+    input {
+        margin-top: 0;
+    }
+    input:read-only {
+        color: #999;
+    }
+
+    input.button {
+        width: 200px;
+        margin-top: 0;
+    }
+
+    .searchbar {
+        height: 40px;
+    }
+
+    input#searchbar {
+        padding-top: 16px;
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 20px;
+        font-style: oblique;
+        color: #ea5b0c;
+        width: 250px;
+        border-width: 0 0 1px;
+        text-decoration: none;
+    }
+
+    .fa-search {
+        color: #eee;
+    }
+
+    i.fas {
+        line-height: 40px;
+    }
+
+    input#searchbar::placeholder {
+        color: #888;
+    }
+
+    input#searchbar:focus {
+        outline-width: 0;
+    }
+
+    button {
+        margin-top: 0;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    form label {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-style: italic;
+        color: #ea5b0c;
+    }
+
+
+    h1 {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-style: italic;
+        font-size: 32pt;
+        color: #ea5b0c;
+    }
+
+    h2 {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-style: italic;
+        font-size: 24pt;
+        color: #ea5b0c;
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid rgba(234, 91, 12, 0.4);
+        margin: 0.5em 0;
+        padding: 0;
+    }
+
+    ul {
+       list-style: none;
+    }
+
+    a.ma-links:link, a.ma-links:visited, a.ma-links:active {
+        color: #000;
+        text-decoration: none;
+    }
+
+    a.footer-links:link, a.footer-links:visited, a.footer-links:active {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    a.footer-links:hover, a.ma-links:hover, tr.management:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    #login-form {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #login-form-div {
+        display: flex;
+        margin-top: 100px;
+    }
+
+    #mainNav {
+        display: flex;
+        padding-left: 10px;
+    }
+
+    #copyright {
+        display: flex;
+        text-align: center;
+        height: 200px;
+        background-color: #eee;
+    }
+
+    #urlaubPlanen {
+        width: 200px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+        background-color: #FFF;
+        flex-wrap: wrap;
+        height: 115px;
+        text-align: center;
+        align-content: center;
+    }
+
+    .header > div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 320px;
+        margin: 10px;
+    }
+
+    .header div img, .footer-options-main-right div {
+        display: flex;
+        justify-content: right;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #001f47;
+        width: 1200px;
+    }
+
+    .footer-status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #364d62;
+        color: #FFF;
+        max-width: 100%;
+        height: 30px;
+    }
+
+    .footer-options {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #001f47;
+        color: #FFF;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .footer-options-main {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .footer-options-main-left {
+        margin: 20px 0 0 40px;
+        font-size: 20px;
+    }
+
+    .footer-options-main-left li {
+        margin-bottom: 10px;
+    }
+
+
+    .footer a {
+        text-decoration: none;
+        color: #b3cce6;
+    }
+
+    .footer a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .footer-options-main-right {
+        margin: 20px 20px;
+    }
+
+    .bfw-logo {
+        position: absolute;
+        right: 15px;
+        width: 250px;
+    }
+
+    .bfw-claim {
+        position: relative;
+        right: 10px;
+        width: 300px;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        max-width: auto;
+        padding: 0px 10px 0px 10px;
+        height: 40px;
+        outline: none;
+        border-width: 0;
+        background-color: #ea5b0c;
+        font-family: "Calibri Light", Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 16pt;
+        font-style: italic;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .ok-button {
+        width: 150px;
+    }
+
+    button:disabled {
+        visibility: hidden;
+    }
+    /* -----------------------------------------------------------------------------------------------------------------
+     * TABLE FORMATTING
+     * -----------------------------------------------------------------------------------------------------------------
+     */
+    table.sortable {
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #001f47;
+    }
+
+    th.management {
+        cursor: pointer;
+        height: 70px;
+        background-color: #001f47;
+        color: #fff;
+    }
+
+    th.management, td.management {
+        text-align: left;
+        padding: 16px;
+    }
+
+    td.uges, td.currYear, td.nextYear {
+        text-align: center;
+    }
+
+    th#names {
+        width: 20%;
+    }
+
+    th#depart {
+        width: 40%;
+    }
+
+    th#uges {
+        width: 10%;
+    }
+
+    th#currYear, th#nextYear {
+        width: 15%;
+    }
+
+    tr.management:nth-child(even) {
+        background-color: rgba(0, 31, 71, 0.1);
+    }
+
+    /* -----------------------------------------------------------------------------------------------------------------
+     * SEITENAUFBAU
+     * -----------------------------------------------------------------------------------------------------------------
+     */
+
+    .page {
+        display: flex;
+        justify-content: center;
+        background-color: #eee;
+    }
+
+    .page-content {
+        display: flex;
+        flex-flow: column;
+        max-width: 1200px;
+        flex-wrap: wrap;
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        background-color: #eee;
+    }
+
+    .main-left {
+        background-color: #fff;
+        padding: 40px;
+        margin: 100px 0px 70px 0px;
+    }
+
+    .main-left-header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .verwaltung {
+        width: 1200px;
+    }
+
+    .main-right {
+        max-width: 400px;
+        margin: 100px 0px 70px 1px;
+        background: white;
+        padding: 40px;
+        text-align: left;
+    }
+
+    .siteContainer-content {
+        display: flex;
+        max-width: 720px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    /* -----------------------------------------------------------------------------------------------------------------
+   * Next Vacation Box
+   * -----------------------------------------------------------------------------------------------------------------
+   */
+
+    .next-vac {
+        display: flex;
+        width: 720px;
+        height: 112px;
+        margin-top: 10px;
+        border: 1px solid #001f47;
+    }
+
+    .confVac-bu {
+        display: flex;
+        justify-content: center;
+        height: 52px;
+        margin-bottom: 10px;
+        border: 1px solid #001f47;
+    }
+    div.bu {
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .next-vac-blue {
+        background-color: #001f47;
+        width: 4px;
+
+
+    }
+
+    .next-vac-grey {
+        display: flex;
+        flex-direction: column;
+        background-color: #eee;
+        
+        width: 720px;
+        padding-left: 10px;
+        padding-right: 20px;
+
+    }
+
+    .next-vac-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .next-vac-datum {
+        font-size: 24px;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .next-vac-grey p{
+        font-size: 16pt;
+        padding-top: 10px;
+    }
+
+    .next-vac-lower {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .status-approved {
+        color: #4CAF50;
+        font-weight: bold;
+    }
+
+    .status-denied {
+        color: #f51010;
+        font-weight: bold;
+    }
+
+    .status-pending {
+        color: #eaad36;
+        font-weight: bold;
+    }
+
+    div.siteContainer-content div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+/*
+    div {
+        border: 1px solid black;
+    }
+
+    /* -----------------------------------------------------------------------------------------------------------------
+     * Plan Next Vacation Box
+     * -----------------------------------------------------------------------------------------------------------------
+     */
+    .plan-vac-form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        max-width: 720px;
+    }
+
+    .plan-vac-row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 20px;
+        max-width: 450px;
+    }
+
+    .plan-vac-row .button {
+        margin-right: 40px;
+    }
+
+    .plan-vac-left {
+        margin-right: 20px;
+    }
+
+    .plan-vac-right {
+        margin-left: 20px;
+    }
+
+    .plan-vac-button {
+        margin-top: 30px;
+    }
+
+
+    /* -----------------------------------------------------------------------------------------------------------------
+     * Approve Vacation Box
+     * -----------------------------------------------------------------------------------------------------------------
+     */
+    .approveVac {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+        height: 120px;
+        width: 720px;
+        border: 1px solid #001f47;
+    }
+
+    .approveVac-lower {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .approveVac-button {
+        margin-right: 20px;
+    }
+
+    .approveVac-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #eee;
+        width: 100%;
+    }
+
+    .approveVac-orange {
+        background-color: #ea5b0c;
+        height: 120px;
+        width: 4px;
+    }
+
+    .approveVac-blue {
+        background-color: #001f47;
+        height: 120px;
+        width: 4px;
+    }
+
+    .approveVac-name {
+        background-color: #001f47;
+        vertical-align: center;
+        height: 30px;
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .approveVac-name {
+        font-size: 16pt;
+        color: #FFF;
+        padding-left: 10px;
+        padding-top: 2px;
+    }
+
+    .approveVac-date, .approveVac-days {
+        font-size: 16pt;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .approveVac-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    .approve, .deny, .edit {
+        text-align: center;
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+        outline: none;
+        border-width: 0;
+        font-family: "Calibri Light", Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 16pt;
+        font-style: italic;
+        color: #FFFFFF;
+    }
+
+    .approve {
+        background-color: #4CAF50;
+    }
+
+    .deny {
+        background-color: #f51010;
+    }
+
+    .edit {
+        background: #bbb;
+    }
+
+    div.approve-box {
+        padding-top: 10px;
+    }
+
+
+    /* -----------------------------------------------------------------------------------------------------------------
+     * Approve Vacation Box
+     * -----------------------------------------------------------------------------------------------------------------
+     */
+    .ma {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+
+    /* -----------------------------------------------------------------------------------------------------------------
+     * Form Styles
+     * -----------------------------------------------------------------------------------------------------------------
+     */
+    .date-input {
+        width: 300px;
+        height: 30px;
+        background-color: #eeeeee;
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: #999999;
+    }
+
+    .day-input {
+        width: 50px;
+        height: 30px;
+        background-color: #eeeeee;
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: #999999;
+    }
+
+    .text-input {
+        width: 200px;
+        height: 30px;
+        background-color: #eeeeee;
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: #999999;
+    }
+
+    /*----------------------------
+     * Meldungsbox
+    -----------------------------*/
+    .meldung {
+        /* display: flex; */
+        /* visibility: hidden; */
+        /* justify-content: center; */
+        text-align: center;
+        max-width: 100%;
+        /* background: rgba(234, 91, 12, 0.1); */
+        /* border: 1px solid #ea5b0c; */
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-weight: bold;
+        color: #ea5b0c;
+        text-align: center;
+    }
+
+    .no-info{
+        display: flex;
+        justify-content: center;
+        line-height: 110px;
+        text-align: center;
+        height: 120px;
+        width: 720px;
+        border: 4px solid #ea5b0c;
+        font-size: 32px;
+        font-weight: bold;
+        color: #ea5b0c;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .mandatoryPwChange{
+        display: flex;
+        justify-content: center;
+        line-height: 110px;
+        text-align: center;
+        height: 120px;
+        width: 720px;
+        /* border: 4px solid #ea5b0c; */
+        font-size: 32px;
+        font-weight: bold;
+        color: #ea5b0c;
+        margin-bottom: 20px;
+    }
+
+
+    /*----------------------------
+     * Nav Properties
+     -----------------------------*/
+
+    nav {
+        background: #ea5b0c;
+        margin: 0;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        transition:all 0.5s;
+        position: relative;
+        z-index: 100000;
+    }
+
+    .nav-wrapper {
+        height: 80px;
+    }
+    nav ul {
+        border: none;
+        display: flex;
+        align-items: stretch;
+        list-style: none;
+        margin: 0;
+    }
+
+    nav li {
+        border: none;
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 80px;
+        margin: 0px;
+    }
+
+    nav li.nav-links{
+        display: flex;
+        align-items: center;
+    }
+
+
+    .Verwaltung {
+        max-width: 134px;
+    }
+
+    .Verwaltung:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content {
+        display: none;
+        text-align: left;
+        position: relative;
+        left: -7.8em; /*-125px;*/
+        top: 72px;
+        background-color: #364d62;
+        z-index: 1;
+        transition: background-color 0.8s ease;
+    }
+
+    .dropdown-content a {
+        width: 250px;
+    }
+
+    .dropdown-content a:hover {
+        width: 250px;
+        background-color: #ea5b0c;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 5px;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+
+    nav a, span.nav-links {
+        text-decoration: none;
+        text-align: center;
+        color: #FFF;
+        font-size: 18pt;
+        font-weight: bold;
+    }
+
+    li.bfw-logo {
+        display: flex;
+        align-items: center;
+        height: 14px;         /* This codeline is the devil! */
+        flex-grow: 6;
+    }
+
+
+    /*----------------------------
+     * Fixed Nav Properties
+     -----------------------------*/
+
+    .nav-wrapper nav.fixedNav {
+        float: left;
+        position: fixed;
+        background-color: #ea5b0c;
+    }
+
+    /*----------------------------
+     * MouseOver Nav/Button Properties
+     -----------------------------*/
+
+    .mouseOver {
+        background-color: #001f47;
+        transition: background-color 0.8s ease;
+    }
+
+
+    /*----------------------------
+     * Responsive Nav Properties
+     -----------------------------*/
+
+    @media (max-width:750px){
+        .bfw-logo:first-child{
+            display:none;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .nav-links a {
+            font-size: 12pt;
+        }
+    }
+
+    /*----------------------------
+     * ModalBox
+     -----------------------------*/
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 2000000; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 600px;
+    }
+
+    .modal-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+
+    .modal-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .modal-labels .modal-inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .modal-labels {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        margin-right: 20px;
+    }
+
+    .modal-inputs {
+        margin-left: 20px;
+    }
+
+    .modal-labels div, .modal-inputs div {
+        height: 20px;
+        margin-top: 10px;
+    }
+
+    .modal-input {
+        width: 300px;
+        height: 20px;
+        background-color: #eeeeee;
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: #999999;
+    }
+
+    .modal-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .modal-buttons button {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .modal-buttons input {
+        width: auto;
+    }
+
+    .modal_no_edit {
+        font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    .pw_info_text {
+        text-align: center;
+        color: #ea5b0c;
+        margin-top: 15px;
+    }
+
+    /* The Close Buttons */
+    .close, .close-BU, .close-PW, .close-MAA {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus,
+    .close-BU:hover,
+    .close-BU:focus,
+    .close-MAA:hover,
+    .close-MAA:focus,
+    .close-PW:hover,
+    .close-PW:focus{
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: #001f47;
+    }
+
+/*    div {
+        border: 1px solid black;
+    }*/
